@@ -4,8 +4,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://canpolatotokurtarma.com"),
-  title: { default: "Canpolat Oto Kurtarma | Ümraniye 7/24 Çekici", template: "%s | Canpolat Oto Kurtarma" },
-  description: "Ümraniye, Çekmeköy, Sancaktepe ve İstanbul genelinde 7/24 oto çekici, ahtapot vinç ve yol yardım hizmeti. Hemen arayın: 0541 823 88 15.",
+  title: { default: "Canpolat Oto Kurtarma | İstanbul 7/24 Çekici", template: "%s | Canpolat Oto Kurtarma" },
+  description: "İstanbul genelinde 7/24 oto çekici, ahtapot vinç ve yol yardım hizmeti. Hemen arayın: 0541 823 88 15.",
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
   alternates: { canonical: "/" },
   robots: {
@@ -18,8 +18,13 @@ export const metadata: Metadata = {
     locale: "tr_TR",
     url: "https://canpolatotokurtarma.com",
     siteName: "Canpolat Oto Kurtarma",
-    title: "Canpolat Oto Kurtarma | Ümraniye 7/24 Çekici",
-    description: "Ümraniye merkezli 7/24 oto çekici, oto kurtarma, ahtapot vinç ve yol yardım hizmeti.",
+    title: "Canpolat Oto Kurtarma | İstanbul 7/24 Çekici",
+    description: "İstanbul genelinde 7/24 oto çekici, oto kurtarma, ahtapot vinç ve yol yardım hizmeti.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Canpolat Oto Kurtarma | İstanbul 7/24 Çekici",
+    description: "İstanbul genelinde 7/24 oto çekici, oto kurtarma, ahtapot vinç ve yol yardım hizmeti.",
   },
 };
 
