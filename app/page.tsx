@@ -91,7 +91,6 @@ export default function Home() {
           <div className="trust-row">
             <span><Star size={16} fill="currentColor" /> <b>5.0</b> / 85 Google yorumu</span>
             <span><ShieldCheck size={16} /> Kaskolu & Sabit Fiyat</span>
-            <span><MapPin size={16} /> Ümraniye Merkezli</span>
           </div>
         </div>
         <div className="hero-index" aria-hidden="true"><b>24</b><span>/ 07</span></div><a href="#hizmetler" className="scroll-cue" aria-label="Hizmetlere geç"><ArrowDown /></a>
