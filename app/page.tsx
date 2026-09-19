@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDown, ArrowUpRight, BatteryCharging, CarFront, Check, Clock3, MapPin, Navigation, Phone, PhoneCall, ShieldCheck, Star, Truck } from "lucide-react";
+import { ArrowDown, ArrowUpRight, BatteryCharging, CarFront, Check, MapPin, Navigation, Phone, PhoneCall, ShieldCheck, Star, Truck } from "lucide-react";
 import { priorityAreas, serviceAreas } from "@/lib/service-areas";
 import { problemPages, routePages, servicePages } from "@/lib/seo-content";
 import { BrandLogo } from "@/components/brand-logo";
@@ -47,7 +47,7 @@ export default function Home() {
           </h1>
 
           <p className="hero-lead">
-            Ümraniye ve İstanbul genelinde binek, SUV ve ticari araçlara 7/24 hasarsız oto kurtarma.
+            İstanbul genelinde binek, SUV ve ticari araçlara 7/24 hasarsız oto kurtarma.
             Aracı komisyoncu yok; doğrudan sahadaki çekici ustasıyla görüşün.
           </p>
 
