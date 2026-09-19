@@ -1,3 +1,5 @@
+import { istanbulNeighborhoods } from "./istanbul-neighborhoods";
+
 export type ServiceArea = { name: string; slug: string; type: "mahalle" | "ilce"; district?: string };
 
 const slugify = (value: string) => value.toLocaleLowerCase("tr-TR")
@@ -20,6 +22,14 @@ const istanbulDistricts = [
 
 export const serviceAreas: ServiceArea[] = [
   ...umraniyeNeighborhoods.map((name) => ({ name, slug: `${slugify(name)}-oto-cekici`, type: "mahalle" as const, district: "Ümraniye" })),
+  ...istanbulNeighborhoods
+    .filter((area) => area.district !== "Ümraniye")
+    .map((area) => ({
+      name: area.name.replace(/\s+Mah\.$/, ""),
+      slug: `${area.districtSlug}-${area.slug}-oto-cekici`,
+      type: "mahalle" as const,
+      district: area.district,
+    })),
   ...istanbulDistricts.map((name) => ({ name, slug: `${slugify(name)}-oto-cekici`, type: "ilce" as const }))
 ];
 

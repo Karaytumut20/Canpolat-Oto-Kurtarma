@@ -1,0 +1,8 @@
+import Link from "next/link";
+import { ArrowUpRight, Phone } from "lucide-react";
+import { BrandLogo } from "@/components/brand-logo";
+import { MobileMenu } from "@/components/mobile-menu";
+
+export function SeoDirectory({ eyebrow, title, intro, groups }: { eyebrow:string; title:string; intro:string; groups:{title:string;links:{name:string;href:string;detail?:string}[]}[] }){
+  return <main className="directory-page"><header className="site-header area-header"><Link className="brand" href="/"><BrandLogo /></Link><nav><Link href="/hizmetler">Hizmetler</Link><Link href="/hizmet-bolgeleri">Bölgeler</Link><Link href="/cozumler">Arıza Rehberi</Link></nav><a className="header-call" href="tel:+905418238815"><Phone size={18}/>0541 823 88 15</a><MobileMenu links={[{href:"/hizmetler",label:"Hizmetler"},{href:"/hizmet-bolgeleri",label:"Hizmet bölgeleri"},{href:"/cozumler",label:"Arıza rehberi"},{href:"/guzergahlar",label:"Güzergâhlar"}]} /></header><section className="directory-hero"><small>{eyebrow}</small><h1>{title}</h1><p>{intro}</p></section><section className="directory-groups">{groups.map(group=><article key={group.title}><h2>{group.title}</h2><div>{group.links.map(link=><Link href={link.href} key={link.href}><span>{link.name}{link.detail&&<small>{link.detail}</small>}</span><ArrowUpRight/></Link>)}</div></article>)}</section><footer className="footer"><div className="brand"><BrandLogo footer /></div><address><a href="https://maps.app.goo.gl/ptUMNrqeF2E79wwt6?g_st=iwb" target="_blank" rel="noreferrer">Alemdağ Caddesi, Tepeüstü<br/>Öztürk Sk. No:44, Ümraniye / İstanbul</a></address><div><a href="tel:+905418238815">0541 823 88 15</a><small>7 gün 24 saat açık</small></div></footer></main>;
+}
